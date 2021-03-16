@@ -1,0 +1,4 @@
+.gitignore
+.vim/
+.git/
+.DS_Store
