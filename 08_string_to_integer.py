@@ -1,35 +1,36 @@
-from collections import deque
-
-
-def valid(char):
-    return ord("0") <= ord(char) <= ord("9")
-
 
 class Solution:
+    def validCharacter(self, ch):
+        return ord('0') <= ord(ch) <= ord('9')
+    
     def myAtoi(self, s: str) -> int:
-        d = deque(s)
-        # remove blank
-        while d and d[0] == " ":
-            d.popleft()
-
+        l = list(s)
+        
+        # remove whitespace
+        while l and l[0] == " ":
+            l.pop(0)
+            
+        # specify sign
         sign = 1
-        if d and d[0] == "+":
-            d.popleft()
+        if l and l[0] == '+':
+            l.pop(0)
             sign = 1
-        elif d and d[0] == "-":
-            d.popleft()
+        elif l and l[0] == '-':
+            l.pop(0)
             sign = -1
-
-        buffer = ""
-        while d and valid(d[0]):
-            buffer += d.popleft()
-
+        
+        # buf = ""
         result = 0
-        for i in buffer:
-            num = ord(i) - ord("0")
+        while l and self.validCharacter(l[0]):
+            num = ord(l.pop(0)) - ord('0')
             result = result * 10 + num
+        
+        # result = 0
+        # for i in buf:
+        #     num = ord(i) - ord('0')
+        #     result = result* 10 + num
 
-        result = result * sign
+        result *= sign  # add sign
 
         if result > 2 ** 31 - 1:
             return 2 ** 31 - 1
