@@ -18,5 +18,5 @@ class Solution:
         s = ""
         for k, v in integer.items():
             d, num = divmod(num, k)
-            s += d*v
+            s += d * v
         return s

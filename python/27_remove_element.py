@@ -1,4 +1,4 @@
-lass Solution:
+class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
         count_of_val = 0
         for element in nums:
