@@ -2,6 +2,6 @@
 
 int main() {
     int c;
-    while(c = getchar() && c != EOF){
+    while (c = getchar() && c != EOF) {
     }
 }

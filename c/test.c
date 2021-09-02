@@ -5,5 +5,5 @@
 int main() {
     double x = 10;
     double y = 5;
-    dprintf(x/y);
+    dprintf(x / y);
 }

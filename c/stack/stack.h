@@ -4,14 +4,13 @@ typedef float Item;
 
 typedef struct Node {
     Item data;
-    Node *next;  // point to next element
+    Node *next; // point to next element
 } Node;
 
 typedef struct Stack {
-	int count;
+    int count;
     Node *top;
 } Stack;
-
 
 // initialize stack
 //
@@ -27,10 +26,10 @@ int stackIsEmpty(const Stack *s);
 int stackIsFull();
 
 // display stack element
-void stackDisplay(Stack* s);
+void stackDisplay(Stack *s);
 
 // stack push
-int stackPush(Stack* s, Item i);
+int stackPush(Stack *s, Item i);
 
 // Stack pop
 Item stackPop(Stack *s);
