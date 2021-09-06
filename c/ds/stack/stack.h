@@ -1,3 +1,6 @@
+#ifndef _STACK_H
+#define _STACK_H
+
 #include <stdio.h>
 
 typedef float Item;
@@ -33,3 +36,5 @@ int stackPush(Stack *s, Item i);
 
 // Stack pop
 Item stackPop(Stack *s);
+
+#endif

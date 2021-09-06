@@ -1,3 +1,6 @@
+#ifndef _QUEUE_H
+#define _QUEUE_H
+
 #include <stdbool.h>
 #include <stdio.h>
 
@@ -21,3 +24,4 @@ void enqueue(Queue *, Item);
 Item dequeue(Queue *);
 void queueDisplay(Queue *);
 void queueDestroy(Queue *);
+#endif
