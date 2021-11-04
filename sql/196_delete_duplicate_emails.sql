@@ -1,9 +1,9 @@
 # Write your MySQL query statement below
-with unique_cte(Id) as (
-    select min(Id)
-    from Person
-    group by Email
+WITH unique_cte(Id) AS (
+    SELECT MIN(Id)
+    FROM Person
+    GROUP BY Email
 )
 
-delete from Person where Id not in (
-select * from unique_cte);
+DELETE FROM Person WHERE Id NOT IN (
+SELECT * FROM unique_cte);

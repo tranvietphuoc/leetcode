@@ -1,6 +1,6 @@
 
 # Write your MySQL query statement below
-select class
-from courses
-group by class
-having count(distinct student) >= 5
+SELECT class
+FROM courses
+GROUPBY  class
+HAVING COUNT(DISTINCT student) >= 5

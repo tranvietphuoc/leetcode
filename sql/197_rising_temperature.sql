@@ -1,5 +1,5 @@
 # Write your MySQL query statement below
-select w1.id
-from weather w1
-cross join weather w2
-where w1.recordDate = w2.recordDate + interval 1 day and w1.temperature > w2.temperature;
+SELECT w1.id
+FROM weather w1
+CROSS JOIN weather w2
+WHERE w1.recordDate = w2.recordDate + interval 1 day AND w1.temperature > w2.temperature;
